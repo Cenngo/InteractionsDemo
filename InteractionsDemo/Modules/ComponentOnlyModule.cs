@@ -14,7 +14,7 @@ namespace InteractionsDemo.Modules
         [SlashCommand("update-message", "Print update demo")]
         public async Task UpdateMessage()
         {
-            await RespondAsync("Haven't updated yet.", component: new ComponentBuilder().WithButton("Update this message", "update-message").Build());
+            await RespondAsync("Haven't updated yet.", components: new ComponentBuilder().WithButton("Update this message", "update-message").Build());
         }
     }
 

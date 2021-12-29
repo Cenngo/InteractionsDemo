@@ -15,7 +15,7 @@ namespace InteractionsDemo.Modules
         {
             await RespondAsync(":thumbsup:", ephemeral: true);
 
-            await textChannel.SendMessageAsync("Click to sign up: ", component: new ComponentBuilder().WithButton("Accept", $"enroll:{applicationId}", ButtonStyle.Success).Build());
+            await textChannel.SendMessageAsync("Click to sign up: ", components: new ComponentBuilder().WithButton("Accept", $"enroll:{applicationId}", ButtonStyle.Success).Build());
         }
 
         // Wild card match can be extracted from custom id, great for creating pinned messsages

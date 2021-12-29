@@ -15,7 +15,7 @@ namespace InteractionsDemo.Modules
         public async Task AddCommands()
         {
             await RespondAsync(":thumbsup:", ephemeral: true);
-            await InteractionService.AddModulesToGuildAsync(Context.Guild, InteractionService.GetModuleInfo<GuildCommandModule>());
+            await InteractionService.AddModulesToGuildAsync(Context.Guild, false, InteractionService.GetModuleInfo<GuildCommandModule>());
         }
 
         [SlashCommand("confirm", "Prints a confirmation dialog")]

@@ -17,7 +17,7 @@ namespace InteractionsDemo.Modules
             foreach (var target in targets)
                 selectMenuBuilder.AddOption(target, target);
 
-            await textChannel.SendMessageAsync("Select some roles:", component: new ComponentBuilder().WithSelectMenu(selectMenuBuilder).Build());
+            await textChannel.SendMessageAsync("Select some roles:", components: new ComponentBuilder().WithSelectMenu(selectMenuBuilder).Build());
         }
 
         [ComponentInteraction("notifications")]
